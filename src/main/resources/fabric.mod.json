@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "ancientdyes",
+	"version": "${version}",
+	"name": "AncientDyes",
+	"description": "Adds back ancient colors long lost",
+	"authors": [
+		"SkrubsTheNeko"
+	],
+	"contact": {
+		"homepage": "Ajawsome@gmail.com",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/ancientdyes/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.skrubs.ancientdyes.AncientDyes"
+		],
+		"fabric-datagen": [
+			"net.skrubs.ancientdyes.AncientDyesDataGenerator"
+		],
+      "client": [
+        "net.skrubs.ancientdyes.AncientDyesClient"
+        ]
+	},
+	"mixins": [
+		"ancientdyes.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
