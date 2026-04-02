@@ -1,0 +1,6 @@
+{
+  "parent": "ancientdyes:block/template_glass_pane_noside_alt",
+  "textures": {
+    "pane": "ancientdyes:block/chartreuse_stained_glass"
+  }
+}
