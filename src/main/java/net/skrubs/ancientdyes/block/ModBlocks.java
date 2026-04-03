@@ -2,6 +2,7 @@ package net.skrubs.ancientdyes.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -10,9 +11,16 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.IntProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.skrubs.ancientdyes.AncientDyes;
+
+import java.util.function.ToIntFunction;
+
+import static net.minecraft.block.Blocks.CANDLE_CAKE;
 
 
 public class ModBlocks {
@@ -129,16 +137,117 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable()
             )
     );
-    public static final Block CHARTREUSE_STAINED_GLASS = registerBlock("chartreuse_stained_glass", new StainedGlassBlock(DyeColor.BLUE,
-            AbstractBlock.Settings.create()
-                    .instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque()
-    ));
+    public static final Block CHARTREUSE_STAINED_GLASS = registerBlock(
+            "chartreuse_stained_glass",
+            new TransparentBlock(
+                    AbstractBlock.Settings.create()
+                            .instrument(NoteBlockInstrument.HAT)
+                            .strength(0.3F)
+                            .sounds(BlockSoundGroup.GLASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::never)
+                            .solidBlock(Blocks::never)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+            )
+    );
     public static final Block CHARTREUSE_STAINED_GLASS_PANE = registerBlock(
             "chartreuse_stained_glass_pane",
             new StainedGlassPaneBlock(
                     DyeColor.BLUE, AbstractBlock.Settings.create().instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque()
             )
     );
+    public static final Block ROSE_STAINED_GLASS = registerBlock(
+            "rose_stained_glass",
+            new TransparentBlock(
+                    AbstractBlock.Settings.create()
+                            .instrument(NoteBlockInstrument.HAT)
+                            .strength(0.3F)
+                            .sounds(BlockSoundGroup.GLASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::never)
+                            .solidBlock(Blocks::never)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+            )
+    );
+    public static final Block ROSE_STAINED_GLASS_PANE = registerBlock(
+            "rose_stained_glass_pane",
+            new StainedGlassPaneBlock(
+                    DyeColor.BLUE, AbstractBlock.Settings.create().instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque()
+            )
+    );
+    public static final Block SPRING_GREEN_STAINED_GLASS = registerBlock(
+            "spring_green_stained_glass",
+            new TransparentBlock(
+                    AbstractBlock.Settings.create()
+                            .instrument(NoteBlockInstrument.HAT)
+                            .strength(0.3F)
+                            .sounds(BlockSoundGroup.GLASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::never)
+                            .solidBlock(Blocks::never)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+            )
+    );
+    public static final Block SPRING_GREEN_STAINED_GLASS_PANE = registerBlock(
+            "spring_green_stained_glass_pane",
+            new StainedGlassPaneBlock(
+                    DyeColor.BLUE, AbstractBlock.Settings.create().instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque()
+            )
+    );
+    public static final Block ULTRAMARINE_STAINED_GLASS = registerBlock(
+            "ultramarine_stained_glass",
+            new TransparentBlock(
+                    AbstractBlock.Settings.create()
+                            .instrument(NoteBlockInstrument.HAT)
+                            .strength(0.3F)
+                            .sounds(BlockSoundGroup.GLASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::never)
+                            .solidBlock(Blocks::never)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+            )
+    );
+    public static final Block ULTRAMARINE_STAINED_GLASS_PANE = registerBlock(
+            "ultramarine_stained_glass_pane",
+            new StainedGlassPaneBlock(
+                    DyeColor.BLUE, AbstractBlock.Settings.create().instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque()
+            )
+    );
+    public static final Block CHARTREUSE_CANDLE = registerBlock(
+            "chartreuse_candle", new CandleBlock(AbstractBlock.Settings.create())
+    );
+    public static final Block CHARTREUSE_CANDLE_CAKE = registerBlock(
+            "chartreuse_candle_cake", new CandleCakeBlock(CHARTREUSE_CANDLE, AbstractBlock.Settings.copyShallow(CANDLE_CAKE)
+                    .nonOpaque()
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.CANDLE)
+                    .pistonBehavior(PistonBehavior.DESTROY))
+    );
+    public static final Block ROSE_CANDLE = registerBlock(
+            "rose_candle", new CandleBlock(AbstractBlock.Settings.create()
+                    .nonOpaque()
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.CANDLE)
+                    .pistonBehavior(PistonBehavior.DESTROY))
+    );
+    public static final Block SPRING_GREEN_CANDLE = registerBlock(
+            "spring_green_candle", new CandleBlock(AbstractBlock.Settings.create()
+                    .nonOpaque()
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.CANDLE)
+                    .pistonBehavior(PistonBehavior.DESTROY))
+    );
+    public static final Block ULTRAMARINE_CANDLE = registerBlock(
+            "ultramarine_candle", new CandleBlock(AbstractBlock.Settings.create()
+                    .nonOpaque()
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.CANDLE)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+            ));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -162,21 +271,31 @@ public class ModBlocks {
             fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_GLAZED_TERRACOTTA);
             fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_STAINED_GLASS);
             fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_STAINED_GLASS_PANE);
+            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_CANDLE);
             fabricItemGroupEntries.add(ModBlocks.ROSE_WOOL);
             fabricItemGroupEntries.add(ModBlocks.ROSE_CONCRETE);
             fabricItemGroupEntries.add(ModBlocks.ROSE_CONCRETE_POWDER);
             fabricItemGroupEntries.add(ModBlocks.ROSE_TERRACOTTA);
             fabricItemGroupEntries.add(ModBlocks.ROSE_GLAZED_TERRACOTTA);
+            fabricItemGroupEntries.add(ModBlocks.ROSE_STAINED_GLASS);
+            fabricItemGroupEntries.add(ModBlocks.ROSE_STAINED_GLASS_PANE);
+            fabricItemGroupEntries.add(ModBlocks.ROSE_CANDLE);
             fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_WOOL);
             fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_CONCRETE);
             fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_CONCRETE_POWDER);
             fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_TERRACOTTA);
             fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_GLAZED_TERRACOTTA);
+            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_STAINED_GLASS);
+            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_STAINED_GLASS_PANE);
+            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_CANDLE);
             fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_WOOL);
             fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_CONCRETE);
             fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_CONCRETE_POWDER);
             fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_TERRACOTTA);
             fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_GLAZED_TERRACOTTA);
+            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_STAINED_GLASS);
+            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_STAINED_GLASS_PANE);
+            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_CANDLE);
         });
     }
 }

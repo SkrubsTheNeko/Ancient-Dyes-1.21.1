@@ -1,0 +1,7 @@
+{
+  "parent": "ancientdyes:block/template_glass_pane_post",
+  "textures": {
+    "edge": "ancientdyes:block/ultramarine_stained_glass_pane_top",
+    "pane": "ancientdyes:block/ultramarine_stained_glass"
+  }
+}

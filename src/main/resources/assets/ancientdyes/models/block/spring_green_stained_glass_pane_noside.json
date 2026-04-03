@@ -1,0 +1,6 @@
+{
+  "parent": "ancientdyes:block/template_glass_pane_noside",
+  "textures": {
+    "pane": "ancientdyes:block/spring_green_stained_glass"
+  }
+}

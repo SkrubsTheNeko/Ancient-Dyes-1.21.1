@@ -1,0 +1,7 @@
+{
+  "parent": "ancientdyes:block/template_four_candles",
+  "textures": {
+    "all": "ancientdyes:block/ultramarine_candle",
+    "particle": "ancientdyes:block/ultramarine_candle"
+  }
+}

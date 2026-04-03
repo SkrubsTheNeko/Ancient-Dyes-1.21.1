@@ -29,5 +29,17 @@
   "block.ancientdyes.spring_green_wool": "Spring Green Wool",
   "block.ancientdyes.ultramarine_wool": "Ultramarine Wool",
   "block.ancientdyes.chartreuse_stained_glass": "Chartreuse Stained Glass",
-  "block.ancientdyes.chartreuse_stained_glass_pane": "Chartreuse Stained Glass Pane"
+  "block.ancientdyes.chartreuse_stained_glass_pane": "Chartreuse Stained Glass Pane",
+  "block.ancientdyes.rose_stained_glass": "Rose Stained Glass",
+  "block.ancientdyes.rose_stained_glass_pane": "Rose Stained Glass Pane",
+  "block.ancientdyes.spring_green_stained_glass": "Spring Green Stained Glass",
+  "block.ancientdyes.spring_green_stained_glass_pane": "Spring Green Stained Glass Pane",
+  "block.ancientdyes.ultramarine_stained_glass": "Ultramarine Stained Glass",
+  "block.ancientdyes.ultramarine_stained_glass_pane": "Ultramarine Stained Glass Pane",
+  "block.ancientdyes.chartreuse_candle": "Chartreuse Candle",
+  "block.ancientdyes.rose_candle": "Rose Candle",
+  "block.ancientdyes.spring_green_candle": "Spring Green Candle",
+  "block.ancientdyes.ultramarine_candle": "Ultramarine Candle",
+  "itemgroup.ancientdyes.ancient_dyes_items": "Anceint Items",
+  "itemgroup.ancientdyes.ancient_dyes_blocks": "Ancient Blocks"
 }

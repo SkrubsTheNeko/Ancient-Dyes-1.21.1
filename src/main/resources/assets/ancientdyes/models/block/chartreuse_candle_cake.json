@@ -1,0 +1,10 @@
+{
+  "parent": "ancientdyes:block/template_cake_with_candle",
+  "textures": {
+    "bottom": "ancientdyes:block/cake_bottom",
+    "candle": "ancientdyes:block/chartreuse_candle",
+    "particle": "ancientdyes:block/cake_side",
+    "side": "ancientdyes:block/cake_side",
+    "top": "ancientdyes:block/cake_top"
+  }
+}

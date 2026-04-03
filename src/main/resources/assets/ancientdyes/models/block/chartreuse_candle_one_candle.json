@@ -1,0 +1,7 @@
+{
+  "parent": "ancientdyes:block/template_candle",
+  "textures": {
+    "all": "ancientdyes:block/chartreuse_candle",
+    "particle": "ancientdyes:block/chartreuse_candle"
+  }
+}

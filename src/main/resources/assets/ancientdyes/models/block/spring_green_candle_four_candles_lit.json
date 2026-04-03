@@ -1,0 +1,7 @@
+{
+  "parent": "ancientdyes:block/template_four_candles",
+  "textures": {
+    "all": "ancientdyes:block/spring_green_candle_lit",
+    "particle": "ancientdyes:block/spring_green_candle_lit"
+  }
+}
