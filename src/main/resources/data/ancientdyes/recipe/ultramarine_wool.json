@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "ingredients",
+  "ingredients": [
+    {
+      "item": "minecraft:white_wool"
+    },
+    {
+      "item": "ancientdyes:ultramarine_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ancientdyes:ultramarine_wool"
+  }
+}

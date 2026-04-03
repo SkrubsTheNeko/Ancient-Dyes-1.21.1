@@ -1,0 +1,6 @@
+{
+  "parent": "ancientdyes:block/carpet",
+  "textures": {
+    "wool": "ancientdyes:block/ultramarine_wool"
+  }
+}

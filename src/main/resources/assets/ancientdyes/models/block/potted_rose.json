@@ -1,0 +1,6 @@
+{
+  "parent": "ancientdyes:block/flower_pot_cross",
+  "textures": {
+    "plant": "ancientdyes:block/rose"
+  }
+}

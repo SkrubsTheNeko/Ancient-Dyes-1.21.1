@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "terracotta",
+  "key": {
+    "#": {
+      "item": "minecraft:terracotta"
+    },
+    "$": {
+      "item": "ancientdyes:ultramarine_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "ancientdyes:ultramarine_terracotta"
+  }
+}

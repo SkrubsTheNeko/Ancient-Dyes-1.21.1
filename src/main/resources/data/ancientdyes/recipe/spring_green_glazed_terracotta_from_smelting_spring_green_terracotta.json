@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "terracotta",
+  "ingredient": {
+    "item": "ancientdyes:spring_green_terracotta"
+  },
+  "result": {
+    "id": "spring_green_glazed_terracotta"
+  }
+}

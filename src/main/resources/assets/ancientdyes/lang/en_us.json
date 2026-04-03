@@ -7,7 +7,6 @@
   "item.ancientdyes.dandelion_seeds": "Dandelion Seeds",
   "item.ancientdyes.flower_seeds": "Flower Seeds",
   "item.ancientdyes.rose_seeds": "Rose Seeds",
-
   "block.ancientdyes.chartreuse_concrete": "Chartreuse Concrete",
   "block.ancientdyes.chartreuse_concrete_powder": "Chartreuse Concrete Powder",
   "block.ancientdyes.rose_concrete": "Rose Concrete",
@@ -41,5 +40,12 @@
   "block.ancientdyes.spring_green_candle": "Spring Green Candle",
   "block.ancientdyes.ultramarine_candle": "Ultramarine Candle",
   "itemgroup.ancientdyes.ancient_dyes_items": "Anceint Items",
-  "itemgroup.ancientdyes.ancient_dyes_blocks": "Ancient Blocks"
+  "itemgroup.ancientdyes.ancient_dyes_blocks": "Ancient Blocks",
+  "block.ancientdyes.chartreuse_carpet": "Chartreuse Carpet",
+  "block.ancientdyes.rose_carpet": "Rose Carpet",
+  "block.ancientdyes.spring_green_carpet": "Spring Green Carpet",
+  "block.ancientdyes.rose": "Rose",
+  "block.ancientdyes.cyan_flower": "Cyan Flower",
+  "block.ancientdyes.flower": "Flower",
+  "block.ancientdyes.dandelion_puff": "Dandelion Puff"
 }

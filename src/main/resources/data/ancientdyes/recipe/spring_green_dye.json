@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "catagory": "ingredients",
+  "ingredients": [
+    {
+      "item": "ancientdyes:dandelion_puff"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ancientdyes:spring_green_dye"
+  }
+}

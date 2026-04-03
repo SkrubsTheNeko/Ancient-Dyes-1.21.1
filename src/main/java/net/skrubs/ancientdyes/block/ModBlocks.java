@@ -5,6 +5,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -248,6 +249,87 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.CANDLE)
                     .pistonBehavior(PistonBehavior.DESTROY)
             ));
+    public static final Block CHARTREUSE_CARPET = registerBlock(
+            "chartreuse_carpet",
+            new DyedCarpetBlock(DyeColor.LIME, AbstractBlock.Settings.create().mapColor(MapColor.LIME).strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable())
+    );
+    public static final Block ROSE_CARPET = registerBlock(
+            "rose_carpet",
+            new DyedCarpetBlock(DyeColor.MAGENTA, AbstractBlock.Settings.create().mapColor(MapColor.MAGENTA).strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable())
+    );
+    public static final Block SPRING_GREEN_CARPET = registerBlock(
+            "spring_green_carpet",
+            new DyedCarpetBlock(DyeColor.CYAN, AbstractBlock.Settings.create().mapColor(MapColor.CYAN).strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable())
+    );
+    public static final Block ULTRAMARINE_CARPET = registerBlock(
+            "ultramarine_carpet",
+            new DyedCarpetBlock(DyeColor.LIGHT_BLUE, AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable())
+    );
+    public static final Block ROSE = registerBlock(
+            "rose",
+            new FlowerBlock(
+                    StatusEffects.LUCK,
+                    5.0F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_ROSE = registerBlock("potted_rose", createFlowerPotBlock(ROSE));
+    public static final Block CYAN_FLOWER = registerBlock(
+            "cyan_flower",
+            new FlowerBlock(
+                    StatusEffects.UNLUCK,
+                    5.0F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_CYAN_FLOWER = registerBlock("potted_cyan_flower", createFlowerPotBlock(CYAN_FLOWER));
+    public static final Block FLOWER = registerBlock(
+            "flower",
+            new FlowerBlock(
+                    StatusEffects.SATURATION,
+                    5.0F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_FLOWER = registerBlock("potted_flower", createFlowerPotBlock(FLOWER));
+    public static final Block DANDELION_PUFF = registerBlock(
+            "dandelion_puff",
+            new FlowerBlock(
+                    StatusEffects.LEVITATION,
+                    5.0F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block POTTED_DANDELION_PUFF = registerBlock("potted_dandelion_puff", createFlowerPotBlock(DANDELION_PUFF));
+
+
+    public static Block createFlowerPotBlock(Block flower) {
+        return new FlowerPotBlock(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -264,38 +346,7 @@ public class ModBlocks {
         AncientDyes.LOGGER.info("Registering Mod Blocks for " + AncientDyes.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_WOOL);
-            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_CONCRETE);
-            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_CONCRETE_POWDER);
-            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_TERRACOTTA);
-            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_GLAZED_TERRACOTTA);
-            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_STAINED_GLASS);
-            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_STAINED_GLASS_PANE);
-            fabricItemGroupEntries.add(ModBlocks.CHARTREUSE_CANDLE);
-            fabricItemGroupEntries.add(ModBlocks.ROSE_WOOL);
-            fabricItemGroupEntries.add(ModBlocks.ROSE_CONCRETE);
-            fabricItemGroupEntries.add(ModBlocks.ROSE_CONCRETE_POWDER);
-            fabricItemGroupEntries.add(ModBlocks.ROSE_TERRACOTTA);
-            fabricItemGroupEntries.add(ModBlocks.ROSE_GLAZED_TERRACOTTA);
-            fabricItemGroupEntries.add(ModBlocks.ROSE_STAINED_GLASS);
-            fabricItemGroupEntries.add(ModBlocks.ROSE_STAINED_GLASS_PANE);
-            fabricItemGroupEntries.add(ModBlocks.ROSE_CANDLE);
-            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_WOOL);
-            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_CONCRETE);
-            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_CONCRETE_POWDER);
-            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_TERRACOTTA);
-            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_GLAZED_TERRACOTTA);
-            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_STAINED_GLASS);
-            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_STAINED_GLASS_PANE);
-            fabricItemGroupEntries.add(ModBlocks.SPRING_GREEN_CANDLE);
-            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_WOOL);
-            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_CONCRETE);
-            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_CONCRETE_POWDER);
-            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_TERRACOTTA);
-            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_GLAZED_TERRACOTTA);
-            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_STAINED_GLASS);
-            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_STAINED_GLASS_PANE);
-            fabricItemGroupEntries.add(ModBlocks.ULTRAMARINE_CANDLE);
+
         });
     }
 }

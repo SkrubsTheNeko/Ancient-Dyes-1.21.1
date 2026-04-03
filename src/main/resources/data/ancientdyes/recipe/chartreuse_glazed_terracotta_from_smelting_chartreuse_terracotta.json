@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "ancientdyes:chartreuse_glazed_terracotta",
+  "ingredient": {
+    "item": "ancientdyes:chartreuse_terracotta"
+  },
+  "result": {
+    "id": "ancientdyes:chartreuse_glazed_terracotta"
+  }
+}

@@ -29,17 +29,10 @@ public class ModItems {
 
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(CHARTREUSE_DYE);
-            fabricItemGroupEntries.add(ROSE_DYE);
-            fabricItemGroupEntries.add(SPRING_GREEN_DYE);
-            fabricItemGroupEntries.add(ULTRAMARINE_DYE);
+
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(CYAN_FLOWER_SEEDS);
-            fabricItemGroupEntries.add(ROSE_SEEDS);
-            fabricItemGroupEntries.add(DANDELION_SEEDS);
-            fabricItemGroupEntries.add(FLOWER_SEEDS);
 
         });
     }

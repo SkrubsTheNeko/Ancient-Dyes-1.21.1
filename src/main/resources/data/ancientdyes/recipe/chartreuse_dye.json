@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "catagory": "ingredients",
+  "ingredients": [
+    {
+      "item": "ancientdyes:flower"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ancientdyes:chartreuse_dye"
+  }
+}

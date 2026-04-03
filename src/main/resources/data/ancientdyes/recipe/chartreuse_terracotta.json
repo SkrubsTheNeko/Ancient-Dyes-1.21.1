@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "terracotta",
+  "key": {
+    "#": {
+      "item": "minecraft:terracotta"
+    },
+    "$": {
+      "item": "ancientdyes:chartreuse_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "ancientdyes:chartreuse_terracotta"
+  }
+}

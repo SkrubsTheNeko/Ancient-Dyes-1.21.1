@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "ingredients",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "item": "ancientdyes:spring_green_dye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ancientdyes:spring_green_candle"
+  }
+}

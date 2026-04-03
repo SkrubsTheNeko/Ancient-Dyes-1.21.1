@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "ancientdyes:chartreuse_concrete",
+    "ancientdyes:rose_concrete",
+    "ancientdyes:spring_green_concrete",
+    "ancientdyes:ultramarine_concrete",
+    "ancientdyes:chartreuse_terracotta",
+    "ancientdyes:rose_terracotta",
+    "ancientdyes:spring_green_terracotta",
+    "ancientdyes:ultramarine_terracotta",
+    "ancientdyes:chartreuse_glazed_terracotta",
+    "ancientdyes:rose_glazed_terracotta",
+    "ancientdyes:spring_green_glazed_terracotta",
+    "ancientdyes:ultramarine_glazed_terracotta"
+  ]
+}
