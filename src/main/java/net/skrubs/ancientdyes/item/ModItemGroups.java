@@ -24,6 +24,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CYAN_FLOWER_SEEDS);
                         entries.add(ModItems.FLOWER_SEEDS);
                         entries.add(ModItems.DANDELION_SEEDS);
+                        entries.add(ModBlocks.CYAN_FLOWER_BUSH);
                         entries.add(ModItems.CHARTREUSE_DYE);
                         entries.add(ModItems.ROSE_DYE);
                         entries.add(ModItems.SPRING_GREEN_DYE);

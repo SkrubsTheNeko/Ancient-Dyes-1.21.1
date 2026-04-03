@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "ancientdyes:block/cyan_flower_bush_bottom"
+    },
+    "half=upper": {
+      "model": "ancientdyes:block/cyan_flower_bush_top"
+    }
+  }
+}

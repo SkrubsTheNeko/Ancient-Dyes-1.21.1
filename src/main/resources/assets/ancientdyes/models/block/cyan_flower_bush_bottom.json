@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "ancientdyes:block/cyan_flower_bush_bottom"
+  }
+}

@@ -219,8 +219,13 @@ public class ModBlocks {
             )
     );
     public static final Block CHARTREUSE_CANDLE = registerBlock(
-            "chartreuse_candle", new CandleBlock(AbstractBlock.Settings.create())
+            "chartreuse_candle", new CandleBlock(AbstractBlock.Settings.create()
+                    .nonOpaque()
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.CANDLE)
+                    .pistonBehavior(PistonBehavior.DESTROY))
     );
+
     public static final Block CHARTREUSE_CANDLE_CAKE = registerBlock(
             "chartreuse_candle_cake", new CandleCakeBlock(CHARTREUSE_CANDLE, AbstractBlock.Settings.copyShallow(CANDLE_CAKE)
                     .nonOpaque()
@@ -325,6 +330,19 @@ public class ModBlocks {
             )
     );
     public static final Block POTTED_DANDELION_PUFF = registerBlock("potted_dandelion_puff", createFlowerPotBlock(DANDELION_PUFF));
+    public static final Block CYAN_FLOWER_BUSH = registerBlock(
+            "cyan_flower_bush",
+            new TallFlowerBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
 
 
     public static Block createFlowerPotBlock(Block flower) {
