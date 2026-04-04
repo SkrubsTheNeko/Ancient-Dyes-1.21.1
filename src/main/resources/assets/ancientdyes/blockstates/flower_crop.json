@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "ancientdyes:block/flower_crop_stage0"
+    },
+    "age=1": {
+      "model": "ancientdyes:block/flower_crop_stage1"
+    }
+  }
+}

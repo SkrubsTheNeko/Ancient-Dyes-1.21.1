@@ -1,0 +1,6 @@
+{
+  "parent": "ancientdyes:block/cross",
+  "textures": {
+    "cross": "ancientdyes:block/cyan_flower_crop_stage1"
+  }
+}

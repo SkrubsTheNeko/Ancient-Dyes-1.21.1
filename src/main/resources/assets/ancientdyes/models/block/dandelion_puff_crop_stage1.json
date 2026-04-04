@@ -1,0 +1,6 @@
+{
+  "parent": "ancientdyes:block/cross",
+  "textures": {
+    "cross": "ancientdyes:block/dandelion_puff_crop_stage1"
+  }
+}

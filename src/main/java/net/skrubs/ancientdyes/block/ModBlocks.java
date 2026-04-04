@@ -3,6 +3,7 @@ package net.skrubs.ancientdyes.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.enums.BedPart;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
@@ -18,6 +19,10 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.skrubs.ancientdyes.AncientDyes;
+import net.skrubs.ancientdyes.block.custom.CyanFlowerCropBlock;
+import net.skrubs.ancientdyes.block.custom.DandelionPuffCropBlock;
+import net.skrubs.ancientdyes.block.custom.FlowerCropBlock;
+import net.skrubs.ancientdyes.block.custom.RoseCropBlock;
 
 import java.util.function.ToIntFunction;
 
@@ -329,6 +334,20 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block BLUE_ROSE_BUSH = registerBlock(
+            "blue_rose_bush",
+            new FlowerBlock(
+                    StatusEffects.LEVITATION,
+                    5.0F,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .offset(AbstractBlock.OffsetType.XZ)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
     public static final Block POTTED_DANDELION_PUFF = registerBlock("potted_dandelion_puff", createFlowerPotBlock(DANDELION_PUFF));
     public static final Block CYAN_FLOWER_BUSH = registerBlock(
             "cyan_flower_bush",
@@ -343,10 +362,63 @@ public class ModBlocks {
                             .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+    public static final Block ROSE_CROP = registerBlockWithoutBlockItem(
+            "rose_crop",
+            new RoseCropBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.CROP)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block FLOWER_CROP = registerBlockWithoutBlockItem(
+            "flower_crop",
+            new FlowerCropBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.CROP)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block CYAN_FLOWER_CROP = registerBlockWithoutBlockItem(
+            "cyan_flower_crop",
+            new CyanFlowerCropBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.CROP)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+    public static final Block DANDELION_PUFF_CROP = registerBlockWithoutBlockItem(
+            "dandelion_puff_crop",
+            new DandelionPuffCropBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .noCollision()
+                            .ticksRandomly()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.CROP)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
 
 
     public static Block createFlowerPotBlock(Block flower) {
         return new FlowerPotBlock(flower, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, Identifier.of(AncientDyes.MOD_ID, name), block);
     }
 
     private static Block registerBlock(String name, Block block) {
